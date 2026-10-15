@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ENTRE SOMBRAS — cuentos para leer a media luz.">
+  <title>ENTRE SOMBRAS — Cuentos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Entre Sombras, inicio">E<span>S</span></a>
+    <nav>
+      <a href="#biblioteca">Biblioteca</a>
+      <a href="#autor">El autor</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> UNA BIBLIOTECA DE RELATOS</p>
+        <h1>ENTRE<br><em>SOMBRAS</em></h1>
+        <p class="hero-subtitle">Hay historias que no se cuentan a plena luz.</p>
+        <p class="hero-text">Relatos para quienes encuentran algo de verdad en lo extraño, en lo que se calla y en aquello que permanece cuando todo parece terminar.</p>
+        <a class="primary-link" href="#biblioteca">ENTRAR A LA BIBLIOTECA <span>↘</span></a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Una luna velada sobre un bosque oscuro">
+        <div class="moon"></div><div class="mist mist-one"></div><div class="mist mist-two"></div>
+        <div class="tree tree-a"></div><div class="tree tree-b"></div><div class="tree tree-c"></div>
+        <div class="art-caption">ARCHIVO NOCTURNO · VOL. I</div>
+      </div>
+      <div class="vertical-note">FICCIÓN · MISTERIO · LO INEXPLICABLE</div>
+    </section>
+
+    <section class="intro-strip">
+      <span>LEER DESPACIO</span><span class="strip-mark">✳</span><span>APAGAR EL RUIDO</span><span class="strip-mark">✳</span><span>DEJAR UNA LUZ ENCENDIDA</span>
+    </section>
+
+    <section class="library section" id="biblioteca">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / LOS RELATOS</p><h2>La biblioteca <em>oscura</em></h2></div>
+        <p class="section-desc">Elegí una historia. Algunas puertas, una vez abiertas, no vuelven a cerrar del todo.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar cuentos">
+        <button class="filter active" data-filter="Todos">Todos</button>
+        <button class="filter" data-filter="Misterio">Misterio</button>
+        <button class="filter" data-filter="Terror">Terror</button>
+        <button class="filter" data-filter="Fantástico">Fantástico</button>
+      </div>
+      <div class="story-grid" id="storyGrid" aria-live="polite"></div>
+      <p class="empty-note" id="emptyNote" hidden>No hay cuentos en esta categoría todavía.</p>
+    </section>
+
+    <section class="quote-band">
+      <div class="quote-symbol">“</div>
+      <blockquote>Lo más aterrador no siempre es lo que vemos.<br> A veces es lo que <em>reconocemos</em>.</blockquote>
+      <p>— ENTRE SOMBRAS</p>
+    </section>
+
+    <section class="author section" id="autor">
+      <div class="author-mark">ES</div>
+      <div>
+        <p class="eyebrow">02 / DETRÁS DE LAS PALABRAS</p>
+        <h2>El autor <em>tras el velo</em></h2>
+        <p>Escribo bajo seudónimo. Me interesan las grietas de lo cotidiano, los silencios que pesan y las preguntas que siguen ahí después de cerrar un libro.</p>
+        <p>Este espacio reúne cuentos de ficción, misterio y oscuridad. Cualquier parecido con la realidad puede ser casual… o no.</p>
+        <p class="author-signature">El nombre permanece en las sombras.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <p class="eyebrow">03 / UNA NOTA EN LA OSCURIDAD</p>
+      <h2>¿Querés dejar <em>un mensaje</em>?</h2>
+      <p>Por ahora, podés preparar un mensaje desde tu correo. Reemplazá el email de ejemplo en <code>script.js</code> por una dirección que quieras publicar.</p>
+      <a class="outline-link" id="contactLink" href="mailto:tu-correo@ejemplo.com?subject=Mensaje%20desde%20ENTRE%20SOMBRAS">ESCRIBIR AL AUTOR ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="#">ENTRE SOMBRAS</a>
+    <p>© <span id="year"></span> · Todos los derechos reservados. Los relatos pertenecen a su autor y no pueden reproducirse sin autorización.</p>
+    <a href="#top" class="back-top">VOLVER ARRIBA ↑</a>
+  </footer>
+
+  <dialog id="storyDialog" class="story-dialog">
+    <button class="dialog-close" aria-label="Cerrar cuento">×</button>
+    <p class="eyebrow" id="dialogCategory"></p>
+    <h2 id="dialogTitle"></h2>
+    <p class="dialog-meta" id="dialogMeta"></p>
+    <article id="dialogBody" class="story-body"></article>
+    <p class="copyright-note">© ENTRE SOMBRAS · No se permite la reproducción sin autorización.</p>
+  </dialog>
+  <script src="stories.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
