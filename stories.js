@@ -47,3 +47,19 @@ const stories = [
     ]
   }
 ];
+,
+
+{
+  id: "el-terror",
+  title: "El terror",
+  category: "Terror",
+  date: "15/10/2026",
+  readingTime: "1 min",
+  excerpt: "Entró en la casa y vio que nadie más lo había visto. Se escondió. Pero una sombra emergió.",
+  paragraphs: [
+    "Entró en la casa y vio que nadie más lo había visto. Se escondió. Emergió una sombra.",
+    "Estaban esperándolo, acechándolo hace rato. No iba a zafar.",
+    "Esta vez la suerte, más que echada, estaba vertida.",
+    "Las garras se le clavaron antes que los dientes. La sangre brotó de la yugular. Recordó aquella tarde en Los Balcanes. Ya nada había para hacer."
+  ]
+}
